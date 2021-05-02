@@ -1,5 +1,5 @@
 <template>
-  <div id="header" class="w-full relative">
+  <div id="header" class="w-full relative ">
     <NavbarVue />
     <div class="pt-24 grid grid-flow-row lg:grid-cols-2 grid-cols-1">
       <div>

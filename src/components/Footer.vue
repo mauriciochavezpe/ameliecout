@@ -1,18 +1,18 @@
 <template>
   <div class="bg-footer lg:h-36 py-2">
     <div class="container mx-auto h-full">
-      <div class="grid lg:grid-cols-3 h-full">
+      <div class="lg:grid lg:grid-cols-3 h-full flex flex-col-reverse">
         <div class=" flex justify-center items-center ">
-          <div  class="my-2 text-white  font-semibold" >
+          <div  class="my-2 text-white  font-medium lg:font-semibold" >
             <p>© {{ date }} Lima. Todos los derechos reservados</p>
           </div>
         </div>
-        <div class=" flex justify-center items-center">
+        <div class=" flex justify-center items-center my-2">
           <div class="mx-2 h-2/5 lg:h-1/4">
             <img class="h-full" src="../assets/imagenes/logo-light.svg" alt="" />
           </div>
         </div>
-        <div class=" flex justify-center items-center"> 
+        <div class=" flex justify-center items-center my-2"> 
              <div  class="text-white font-medium" >
             <p class="text-left">Horario de atención</p>
             <p >Lunes - Sabado   </p>
