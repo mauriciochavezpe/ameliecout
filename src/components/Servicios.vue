@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-      <img class="" src="../assets/imagenes/botton-section-services.svg" alt="" srcset="" />
+      <!-- <img class="" src="../assets/imagenes/botton-section-services.svg" alt="" srcset="" /> -->
   </div>
 </template>
 

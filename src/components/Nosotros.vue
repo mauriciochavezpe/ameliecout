@@ -14,7 +14,9 @@
             </p>
           </div>
           <div class="flex justify-end px-4 m-4">
-            <button  class="lg:mr-2 border-blue-900 px-5 py-2 bg-blue-500 text-white bold-700 rounded-full hover:bg-blue-400 focus:outline-none focus:bg-blue-500">Ver más</button>
+            <button  class="lg:mr-2 border-blue-900 px-5 py-2 bg-blue-500 text-white bold-700 rounded-full hover:bg-blue-400 focus:outline-none focus:bg-blue-500">Saber más 
+              
+            </button>
           </div>
         </div>
       </div>

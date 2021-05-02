@@ -1,11 +1,10 @@
 <template>
-  <div id="" class="w-full mx-auto">
+  <div id="section-contacto" class="w-full mx-auto">
     <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4  sm:lg:grid-flow-row gap-4">
       <div class="lg:col-start-2 lg:col-end-4 mx-4">
         <div class="mt-6">
           <div class="my-4">
             <h2 class="text-4xl sm:lg:text-6xl">Contactanos</h2>
-
           </div>
           <div class="w-full ">
             <form
@@ -104,5 +103,9 @@ export default {};
 </script>
 
 <style>
+  #section-contacto{
+    background: url('../assets/imagenes/bg17.jpg');
+    background-size: cover;
 
+  }
 </style>

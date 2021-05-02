@@ -1,7 +1,8 @@
 <template>
-  <div class="container mx-auto ">
-    <!-- fixed z-10 -->
-    <div class=" h-full w-full">
+<div  class="w-full">
+  <div id="navbar" class="fixed w-full  transform duration-500 ease-in-out">
+  <div  class=" container mx-auto">
+    <div class=" h-full w-full ">
       <div class="flex justify-between item-center">
         <div class="lg:flex justify-start">
           <span class="sr-only">Amélíe Cout</span>
@@ -9,7 +10,7 @@
             <img
               class="m-5"
               src="../assets/imagenes/logo.svg"
-              alt=""
+              alt="logo emilie cout 2021"
               srcset=""
             />
           </div>
@@ -17,10 +18,10 @@
         <div class="hidden lg:flex">
           <div class="flex justify-end ">
             <div class="flex items-center">
-              <a href="#" class="text-lg mx-5">INICIO</a>
-              <a href="#" class="text-lg mx-5">SERVICIOS</a>
-              <a href="#" class="text-lg mx-5">NOSOTROS</a>
-              <a href="#" class="text-lg mx-5">CONTACTO</a>
+              <a href="#" class="text-xl mx-5">INICIO</a>
+              <a href="#" class="text-xl mx-5">SERVICIOS</a>
+              <a href="#" class="text-xl mx-5">NOSOTROS</a>
+              <a href="#" class="text-xl mx-5">CONTACTO</a>
             </div>
           </div>
         </div>
@@ -63,6 +64,8 @@
       </div>
     </div>
   </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -80,7 +83,20 @@ export default {
         document.getElementById("menu").classList.add("-translate-x-full");
       } 
     }
-  }
+  },
+   created: function () {
+    window.onscroll = function () {
+
+      let navbar = document.getElementById("navbar");
+      let positionScroll = window.scrollY;
+      // debugger;
+      if (positionScroll > 50) {
+        navbar.classList.add("bg-gray-300");
+      } else {
+        navbar.classList.remove("bg-gray-300");
+      }
+    };
+  },
 };
 </script>
 
