@@ -9,7 +9,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
-  },
+  },{
+    path:'*',
+    name:'404',
+    component: () => import(/* webpackChunkName: "about" */ '../views/404.vue')
+  }
   // {
   //   path: '/about',
   //   name: 'About',
@@ -21,6 +25,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 

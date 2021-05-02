@@ -7,16 +7,20 @@
       <div class=" container mx-auto">
         <div class="h-full w-full">
           <div class="flex justify-between item-center">
-            <div class="lg:flex justify-start">
+            <div class="lg:flex w-40 justify-start">
               <span class="sr-only">Amélíe Cout</span>
-              <div class="w-40 lg:w-full">
+              <div class=" lg:w-full">
                 <!-- logo big -->
+                <!-- <button > -->
+
                 <img
-                  class="m-5"
+                class="m-5"
+                   @click="redit"
                   src="../assets/imagenes/logo.svg"
                   alt="logo emilie cout 2021"
                   srcset=""
                 />
+                <!-- </button> -->
               </div>
             </div>
             <div class="hidden lg:flex ">
@@ -107,6 +111,9 @@ export default {
             menuButtons.classList.toggle("menu--active");
             this.menuResponsive()
           }
+    },
+    redit:()=>{
+      console.log("DADASDAS");
     }
   },
   created: function() {
