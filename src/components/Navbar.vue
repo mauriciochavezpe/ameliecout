@@ -20,16 +20,15 @@
                 <!-- </button> -->
               </div>
             </div>
-            <div class="hidden lg:flex ">
+            <div class="lg:flex ">
               <div class="flex justify-end ">
                 <div class="flex items-center">
                   <!-- <a href="#" class="text-xl mx-5">INICIO</a> -->
-                  <!-- <router-link class="text-xl mx-5" to="/">INICIO</router-link>
-                  <router-link class="text-xl mx-5" to="/servicios">SERVICIOS</router-link>
-                  -->
-                  <a href="#" class="text-xl mx-5">SERVICIOS</a>
+                  <!-- <a href="#" class="text-xl mx-5">SERVICIOS</a> -->
                   <!-- <a href="#" class="text-xl mx-5">NOSOTROS</a> -->
                   <!-- <a href="#" class="text-xl mx-5">CONTACTO</a> -->
+                  <router-link class="text-xl mx-5" to="/">INICIO</router-link>
+                  <router-link class="text-xl mx-5" to="/servicios">SERVICIOS</router-link>
                   <router-link class="text-xl mx-5" to="/nosotros">NOSOTROS</router-link>
                   <router-link class="text-xl mx-5" to="/contacto">CONTACTO</router-link> 
                 </div>
