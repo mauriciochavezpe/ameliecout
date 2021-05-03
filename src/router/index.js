@@ -7,8 +7,20 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    // name: 'Home',
     component: Home
+  },{
+    path: '/Servicios',
+    // name: 'Services',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Servicios.vue')
+  },{
+    path: '/Nosotros',
+    // name: 'Home',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Nosotros.vue')
+  },{
+    path: '/Contacto',
+    // name: 'Home',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Contacto.vue')
   },{
     path:'*',
     name:'404',

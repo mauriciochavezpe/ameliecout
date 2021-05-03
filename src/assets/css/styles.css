@@ -5,3 +5,7 @@
 @tailwind utilities;
 
 
+#section-contacto {
+    background: url("../imagenes/bg17.jpg");
+    background-size: cover;
+  }

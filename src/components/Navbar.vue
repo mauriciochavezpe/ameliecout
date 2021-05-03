@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="w-full"
-    v-bind:class="[scroller ? '' : 'overflow-hidden']"
-  >
+  <div class="w-full">
     <div id="navbar" class="fixed w-full transform duration-500 ease-in-out">
       <div class=" container mx-auto">
         <div class="h-full w-full">
@@ -13,9 +10,9 @@
                 <!-- logo big -->
                 <!-- <button > -->
 
+                <!-- @click="redit" -->
                 <img
-                class="m-5"
-                   @click="redit"
+                  class="m-5"
                   src="../assets/imagenes/logo.svg"
                   alt="logo emilie cout 2021"
                   srcset=""
@@ -26,17 +23,27 @@
             <div class="hidden lg:flex ">
               <div class="flex justify-end ">
                 <div class="flex items-center">
-                  <a href="#" class="text-xl mx-5">INICIO</a>
+                  <!-- <a href="#" class="text-xl mx-5">INICIO</a> -->
+                  <!-- <router-link class="text-xl mx-5" to="/">INICIO</router-link>
+                  <router-link class="text-xl mx-5" to="/servicios">SERVICIOS</router-link>
+                  -->
                   <a href="#" class="text-xl mx-5">SERVICIOS</a>
-                  <a href="#" class="text-xl mx-5">NOSOTROS</a>
-                  <a href="#" class="text-xl mx-5">CONTACTO</a>
+                  <!-- <a href="#" class="text-xl mx-5">NOSOTROS</a> -->
+                  <!-- <a href="#" class="text-xl mx-5">CONTACTO</a> -->
+                  <router-link class="text-xl mx-5" to="/nosotros">NOSOTROS</router-link>
+                  <router-link class="text-xl mx-5" to="/contacto">CONTACTO</router-link> 
                 </div>
               </div>
             </div>
             <!-- menu responsive -->
             <div class="lg:hidden">
               <div class=" fixed right-2 mt-2 z-50">
-                <button v-on:click="burgertoggle" id="buttonToggle" class="focus:outline-none menu menu--slide" type="button">
+                <button
+                  v-on:click="burgertoggle"
+                  id="buttonToggle"
+                  class="focus:outline-none menu menu--slide"
+                  type="button"
+                >
                   <span class="menu__inner"></span>
                 </button>
                 <!-- <button v-on:click="abrir_menu" class="mx-auto">
@@ -59,7 +66,7 @@
               </div>
             </div>
             <!-- menu desktop -->
-            <div class="lg:hidden">
+            <div class="hidden lg:hidden">
               <div
                 id="menu"
                 class="fixed z-20 h-screen transform translate-x-full 
@@ -68,7 +75,12 @@
                 <div
                   class="w-full h-full flex flex-col justify-center align-center uppercase font-medium"
                 >
-                  <a href="#" class="text-3xl m-5">INICIO </a>
+                  <!-- <a href="#" class="text-3xl m-5"> -->
+                  <!-- <router-link to="/">INICIO</router-link>
+                    <router-link to="/">SERVICIOS</router-link>
+                    <router-link to="/">NOSOTROS</router-link> -->
+                  <!-- <router-link to="/">CONCTACTO</router-link> -->
+                  <!-- </a> -->
                   <a href="#" class="text-3xl m-5">SERVICIOS</a>
                   <a href="#" class="text-3xl m-5">NOSOTROS</a>
                   <a href="#" class="text-3xl m-5">CONTACTOS</a>
@@ -91,30 +103,29 @@ export default {
     };
   },
   methods: {
-     menuResponsive: function() {
-      
+    menuResponsive: function() {
       if (
         document.getElementById("menu").classList.contains("-translate-x-full")
       ) {
         document.getElementById("menu").classList.remove("-translate-x-full");
         document.getElementById("menu").classList.remove("translate-x-full");
-        document.getElementsByTagName("body")[0].style.overflow="";
+        // document.getElementsByTagName("body")[0].style.overflow="";
       } else {
         document.getElementById("menu").classList.remove("translate-x-full");
         document.getElementById("menu").classList.add("-translate-x-full");
-        document.getElementsByTagName("body")[0].style.overflow="hidden"
+        // document.getElementsByTagName("body")[0].style.overflow="hidden"
       }
     },
-      burgertoggle: function() {
+    burgertoggle: function() {
       const menuButtons = document.getElementById("buttonToggle");
-          if(menuButtons){
-            menuButtons.classList.toggle("menu--active");
-            this.menuResponsive()
-          }
+      if (menuButtons) {
+        menuButtons.classList.toggle("menu--active");
+        this.menuResponsive();
+      }
     },
-    redit:()=>{
+    redit: () => {
       console.log("DADASDAS");
-    }
+    },
   },
   created: function() {
     window.onscroll = function() {
@@ -145,7 +156,7 @@ export default {
   background: none;
   border: none;
   padding: 0;
-  
+
   text-indent: 5rem;
   overflow: hidden;
   position: relative;
@@ -192,7 +203,7 @@ export default {
 .menu--slide .menu__inner,
 .menu--slide .menu__inner:before,
 .menu--slide .menu__inner:after {
-  transition: transform, top,left, 0.16s ease-in-out;
+  transition: transform, top, left, 0.16s ease-in-out;
 }
 
 .menu--slide.menu--active .menu__inner {
@@ -210,5 +221,4 @@ export default {
   left: 2rem;
   top: 0;
 }
-
 </style>
