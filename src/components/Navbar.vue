@@ -7,10 +7,6 @@
             <div class="lg:flex w-40 justify-start">
               <span class="sr-only">Amélíe Cout</span>
               <div class=" lg:w-full">
-                <!-- logo big -->
-                <!-- <button > -->
-
-                <!-- @click="redit" -->
                 <img
                   class="m-5"
                   src="../assets/imagenes/logo.svg"
@@ -20,17 +16,23 @@
                 <!-- </button> -->
               </div>
             </div>
-            <div class="lg:flex ">
-              <div class="flex justify-end ">
+            <div class="hidden lg:flex ">
+              <div class="flex justify-end">
                 <div class="flex items-center">
                   <!-- <a href="#" class="text-xl mx-5">INICIO</a> -->
                   <!-- <a href="#" class="text-xl mx-5">SERVICIOS</a> -->
                   <!-- <a href="#" class="text-xl mx-5">NOSOTROS</a> -->
                   <!-- <a href="#" class="text-xl mx-5">CONTACTO</a> -->
                   <router-link class="text-xl mx-5" to="/">INICIO</router-link>
-                  <router-link class="text-xl mx-5" to="/servicios">SERVICIOS</router-link>
-                  <router-link class="text-xl mx-5" to="/nosotros">NOSOTROS</router-link>
-                  <router-link class="text-xl mx-5" to="/contacto">CONTACTO</router-link> 
+                  <router-link class="text-xl mx-5" to="/servicios"
+                    >SERVICIOS</router-link
+                  >
+                  <router-link class="text-xl mx-5" to="/nosotros"
+                    >NOSOTROS</router-link
+                  >
+                  <router-link class="text-xl mx-5" to="/contacto"
+                    >CONTACTO</router-link
+                  >
                 </div>
               </div>
             </div>
@@ -65,7 +67,7 @@
               </div>
             </div>
             <!-- menu desktop -->
-            <div class="hidden lg:hidden">
+            <div class=" lg:hidden">
               <div
                 id="menu"
                 class="fixed z-20 h-screen transform translate-x-full 
@@ -108,11 +110,11 @@ export default {
       ) {
         document.getElementById("menu").classList.remove("-translate-x-full");
         document.getElementById("menu").classList.remove("translate-x-full");
-        // document.getElementsByTagName("body")[0].style.overflow="";
+        document.getElementsByTagName("body")[0].style.overflow="";
       } else {
         document.getElementById("menu").classList.remove("translate-x-full");
         document.getElementById("menu").classList.add("-translate-x-full");
-        // document.getElementsByTagName("body")[0].style.overflow="hidden"
+        document.getElementsByTagName("body")[0].style.overflow="hidden"
       }
     },
     burgertoggle: function() {
@@ -123,7 +125,7 @@ export default {
       }
     },
     redit: () => {
-      console.log("DADASDAS");
+      
     },
   },
   created: function() {

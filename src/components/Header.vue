@@ -1,10 +1,12 @@
 <template>
   <div id="header" class="w-full relative ">
     <NavbarVue />
-    <div class="pt-24 grid grid-flow-row lg:grid-cols-2 grid-cols-1">
-      <div class="h-full">
-        <div class="flex w-full h-full ">
-          <div class="m-5 w-full flex-col">
+    <!--  -->
+    <div class="pt-24 h-full  ">
+      <div class="grid grid-flow-row grid-cols-1 lg:grid-cols-2">
+        
+        <div class="lg:col-start-2 flex w-full h-full">
+          <div class="m-5 | w-full flex-col">
             <p class="text-4xl lg:text-7xl text-left break-words ">
               Disfrutar de un postre es amor a primera mordida...
             </p>
@@ -17,7 +19,10 @@
               </button>
             </div>
           </div>
+       
+
         </div>
+           
       </div>
     </div>
     <!-- <div class="w-full h-96">
