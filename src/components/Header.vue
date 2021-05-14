@@ -1,7 +1,7 @@
 <template>
   <div id="header" class="w-full relative ">
     <NavbarVue />
-    <!--  -->
+    
     <div class="pt-24 h-full  ">
       <div class="grid grid-flow-row grid-cols-1 lg:grid-cols-2">
         
@@ -13,7 +13,8 @@
 
             <div class="mt-10 px-10 w-full flex justify-end">
               <button
-                class=" border-blue-900 py-2 px-4  bg-blue-500 text-white bold-700 rounded-full hover:bg-blue-400 focus:outline-none focus:bg-blue-500"
+                class=" border-blue-900 py-2 px-4 bg-blue-500 text-white bold-700 rounded-full hover:bg-blue-400 focus:outline-none focus:bg-blue-500"
+              @click="verCatalogo"
               >
                 Ver Catalogo
               </button>
@@ -22,7 +23,7 @@
        
 
         </div>
-           
+        
       </div>
     </div>
     <!-- <div class="w-full h-96">
@@ -39,6 +40,11 @@ export default {
   components: {
     NavbarVue,
   },
+  methods:{
+    verCatalogo(){
+      window.open("https://www.google.com/","_blank")
+    }
+  }
 };
 </script>
 

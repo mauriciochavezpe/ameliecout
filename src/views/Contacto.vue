@@ -16,9 +16,9 @@
             <div class="mt-6">
             
 
-              <div class="w-full ">
+              <div class="w-full">
                 <form
-                  action="https://api.web3forms.com/submit"
+                  action=""
                   class="text-left w-full"
                   method="POST"
                   id="form"

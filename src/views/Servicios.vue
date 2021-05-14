@@ -1,106 +1,70 @@
 <template>
   <div class="w-full">
+    
+    <DetalleProducto @openDialog="isEnabledModal = $event" v-if="isEnabledModal" />
     <Navbar />
-    <div id="section-contacto" class="pt-40">
-      <div class="mx-auto container">
-        <div
-          class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4  sm:lg:grid-flow-row "
-        >
-          <div class="my-4 col-start-1 col-end-5">
-            <h2 class="text-4xl sm:lg:text-6xl">Contactanos</h2>
-          </div>
-          <div class="lg:col-start-1 lg:col-end-3">
-
-          </div>
-          <div class="lg:col-start-3 lg:col-end-5 mx-4">
-            <div class="mt-6">
-              <div class="w-full ">
-                <form
-                  action="https://api.web3forms.com/submit"
-                  class="text-left w-full"
-                  method="POST"
-                  id="form"
-                >
-                  <div class="mb-6">
-                    <label
-                      for="name"
-                      class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                      >Nombres</label
-                    >
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="John Doe"
-                      autocomplete="off"
-                      required
-                      class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md 
-                  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 
-                  dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                    />
-                  </div>
-                  <div class="mb-6">
-                    <label
-                      for="email"
-                      class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                      >Correo</label
-                    >
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      autocomplete="off"
-                      placeholder="you@company.com"
-                      required
-                      class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                    />
-                  </div>
-                  <div class="mb-6">
-                    <label
-                      for="phone"
-                      class="text-sm text-gray-600 dark:text-gray-400"
-                      >Asunto</label
-                    >
-                    <input
-                      type="text"
-                      name="phone"
-                      id="phone"
-                      placeholder="Torta personalizada"
-                      required
-                      class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                    />
-                  </div>
-                  <div class="mb-6">
-                    <label
-                      for="message"
-                      class="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                      >Mensaje</label
-                    >
-
-                    <textarea
-                      rows="4"
-                      name="message"
-                      id="message"
-                      placeholder="mensaje descriptivo y detalle"
-                      class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500 resize-none"
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="mb-6">
-                    <button
-                      type="submit"
-                      class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
-                    >
-                      Enviar mensaje
-                    </button>
-                  </div>
-                  <p
-                    class="text-base text-center text-gray-400"
-                    id="result"
-                  ></p>
-                </form>
+    <div id="section-contacto" class=" pt-40">
+      <div class="container mx-auto">
+        <div class="my-4 | lg:flex justify-between lg:mx-auto mx-4">
+        <!-- <div class="my-4 | grid grid-cols-1 mx-4"> -->
+          <div class="w-full lg:w-72 h-60 bg-blue-200 | rounded-md lg:mx-2 mb-2">
+            <form action="" class="text-left p-2">
+              <div class="my-2">
+                <label class="block mb-1" for="">Nombre</label>
+                <input
+                  autocomplete="off"
+                  placeholder="eg. brownies, cupcakes, etc."
+                  class="w-full | rounded-md p-2"
+                  id="name"
+                />
+                <!-- <input
+                type="range"
+                  autocomplete="off"
+                  placeholder="eg. brownies, cupcakes, etc."
+                  class="w-full | rounded-md p-2"
+                  id="name"
+                /> -->
               </div>
-            </div>
+              <div class="my-2">
+                <label class="block mb-1" for="">Categoria</label>
+                <select class="w-full p-1 | rounded-md | p-2">
+                  <option value="value2" selected>Categoria 1</option>
+                  <option value="value3">Categoria 2</option>
+                </select>
+              </div>
+              <div class="my-4">
+                <button
+                  class="w-full | flex justify-center | font-bold  | px-2 py-2 | text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
+                >
+                  Buscar
+                  <div class="ml-1 h-6 w-6">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="{2}"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Producto  @openDialog="isEnabledModal = $event" />
+            <Producto  @openDialog="isEnabledModal = $event"/>
+            <Producto  @openDialog="isEnabledModal = $event"/>
+            <Producto  @openDialog="isEnabledModal = $event"/>
+            <Producto  @openDialog="isEnabledModal = $event"/>
+            <Producto  @openDialog="isEnabledModal = $event"/>
+            <Producto  @openDialog="isEnabledModal = $event"/>
           </div>
         </div>
       </div>
@@ -110,11 +74,26 @@
 </template>
 
 <script>
-// import Contacto from "../components/Contacto.vue";
+import Producto from "../components/Producto.vue";
 import Footer from "../components/Footer.vue";
 import Navbar from "../components/Navbar.vue";
+import DetalleProducto from "../components/Dialog/DetalleProducto";
 export default {
-  components: { Navbar, Footer },
+  data() {
+    return {
+      isEnabledModal: false,
+    };
+  },
+  components: { Navbar, Footer, Producto, DetalleProducto },
+  methods: {
+    closeDialog: function(value) {
+      this.isEnabledModal = value;
+    },
+    openDialog: function() {
+      console.log("OPEN");
+      this.isEnabledModal = true;
+    },
+  },
 };
 </script>
 
@@ -124,4 +103,8 @@ export default {
     background-size: cover;
   }
    */
+span::before {
+  content: "S/. ";
+  font-style: oblique;
+}
 </style>

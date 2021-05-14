@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       sectionContact: {
-        title: "¿ Quienes somos ?",
+        title: "¿ Quiénes somos ?",
         enabled: true,
         pearson: "Emilia Fiorella",
         about1: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque minus voluptate doloribus id amet iste nostrum quis incidunt fuga natus! Unde cum non ipsam quas iure modi in deserunt necessitatibus?`,

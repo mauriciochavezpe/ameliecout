@@ -1,5 +1,5 @@
 <template>
-   <div class="mx-auto">
+   <div class="mx-auto" @click="irServicios">
           <div class="w-full h-28 flex justify-center">
                <img class="h-full" :src="p.imagen" alt="" />
                <!-- <img class="h-full" :src="../assets/imagenes/cookies.svg" alt="" /> -->
@@ -18,7 +18,12 @@
 <script>
 export default {
     name:'Producto',
-    props:["p"]
+    props:["p"],
+     methods:{
+    irServicios:function(){
+      this.$router.push("Servicios")
+    }
+  }
 
 }
 </script>
