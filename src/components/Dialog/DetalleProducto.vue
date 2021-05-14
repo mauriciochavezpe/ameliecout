@@ -11,13 +11,13 @@
         </div>
         <hr class="mb-2" />
         <div class="grid sm:grid-cols-1 lg:grid-cols-2">
-          <div class=" m-2">
+          <div class="mx-2 lg:h-64 h-36">
             <img
-              width="rounded-lg"
+              class="rounded-lg w-full h-full"
               src="https://upload.wikimedia.org/wikipedia/commons/5/56/Chocolate_cupcakes.jpg"
             />
           </div>
-          <div class="m-2 text-left ">
+          <div class="mx-2 text-left ">
             <div class="w-full grid grid-cols-2 gap-2 | my-2">
               <strong class="self-center">Nombre Producto:</strong>
               <strong class="text-left">Tartaleta</strong>
