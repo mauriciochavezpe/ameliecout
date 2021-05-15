@@ -58,4 +58,9 @@ price::after {
   height: 1rem;
   width: 1rem;
 }
+
+price::before {
+  content: "S/. ";
+  font-style: oblique;
+}
 </style>

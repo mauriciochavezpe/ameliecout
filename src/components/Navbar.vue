@@ -118,9 +118,11 @@ export default {
       let positionScroll = window.scrollY;
       // debugger;
       if (positionScroll > 50) {
-        navbar.classList.add("bg-gray-300");
+        navbar.classList.add("bg-gray-100");
+        navbar.classList.add("shadow-md");
       } else {
-        navbar.classList.remove("bg-gray-300");
+        navbar.classList.remove("bg-gray-100");
+        navbar.classList.remove("shadow-md");
       }
     };
   },
