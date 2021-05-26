@@ -18,7 +18,7 @@
           archivos de texto.
         </p>
         <strong class="cursor-pointer" @click="irMessagewsp"
-          ><span class=".price">20.00</span></strong
+          ><span class="price">20.00</span></strong
         >
       </div>
     </div>
@@ -59,8 +59,5 @@ price::after {
   width: 1rem;
 }
 
-price::before {
-  content: "S/. ";
-  font-style: oblique;
-}
+
 </style>

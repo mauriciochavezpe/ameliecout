@@ -7,7 +7,7 @@
           class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4  sm:lg:grid-flow-row "
         >
           <div class="my-4 col-start-1 col-end-5">
-            <h2 class="text-4xl sm:lg:text-6xl">Contactanos</h2>
+            <h2 class="text-4xl sm:lg:text-6xl">Contáctanos</h2>
           </div>
             <div class="lg:col-start-1 lg:col-end-3 h-full">
                 <img class="" src="../assets/imagenes/service-04.jpg" alt="" />

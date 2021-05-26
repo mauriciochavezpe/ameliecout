@@ -1,0 +1,9 @@
+.ul-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ul-scrollbar::-webkit-scrollbar-thumb {
+  background: #c3c3c3;
+  padding: 1rem;
+  border-radius: 20px;
+}

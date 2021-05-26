@@ -1,5 +1,6 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
+  <!-- eslint-disable -->
   <transition
     enter-active-class="ease-out duration-300"
     enter-class="opacity-0"
@@ -91,34 +92,37 @@
                       class="w-full grid grid-cols-1 lg:grid-cols-2 gap-2 | my-2"
                     >
                       <strong class="self-center">Porciones</strong>
-                       <select
+                      <ListBox />
+                       <!-- <select
                         class="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none"
                       >
                          <option value="chocolate">10</option>
                         <option value="Vainilla">12</option>
-                       </select>
+                       </select> -->
                     </div> 
                     <div
                       class="w-full grid grid-cols-1 lg:grid-cols-2 gap-2 | my-2 "
                     >
                       <strong class="self-center">Opción de cake:</strong>
-                      <select
+                         <ListBox />
+                      <!-- <select
+                        class="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none"
+                      > -->
+                      <!-- <select
                         class="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none"
                       >
                         <option value="chocolate">Chocolate</option>
                         <option value="Vainilla">Vainilla</option>
-                      </select>
-                    </div>
+                      </select> -->
+                       <!-- <ListBox/> -->
+
+                      </div>
+                      
                     <div
                       class="w-full grid grid-cols-1 lg:grid-cols-2 gap-2 my-2"
                     >
                       <strong class="self-center">Opción de relleno:</strong>
-                      <select
-                        class="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none"
-                      >
-                        <option value="chocolate">Chocolate</option>
-                        <option value="Vainilla">Vainilla</option>
-                      </select>
+                       <ListBox />
                     </div>
                     <div class="w-full grid grid-cols-1 gap-2">
                       <strong>Información referencial: </strong>
@@ -126,7 +130,7 @@
                         rows="2"
                         maxlength="200"
                         v-model="inforReferencial"
-                        class=" px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500 resize-none"
+                        class=" px-2 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500 resize-none"
                         required
                       />
                       <div class="flex justify-end">
@@ -136,50 +140,9 @@
                   </div>
                 </div>
               </div>
-              <!-- </div> -->
+            
               <div></div>
             </div>
-
-            <!-- <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-              <div class="sm:flex sm:items-start">
-                <div
-                  class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10"
-                >
-                  
-                  <svg
-                    class="h-6 w-6 text-red-600"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                    />
-                  </svg> 
-                </div>
-                <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                  <h3
-                    class="text-lg leading-6 font-medium text-gray-900"
-                    id="modal-title"
-                  >
-                    Deactivate account
-                  </h3>
-                  <div class="mt-2">
-                    <p class="text-sm text-gray-500">
-                      Are you sure you want to deactivate your account? All of
-                      your data will be permanently removed. This action cannot
-                      be undone.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
             <div
               class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
             >
@@ -212,7 +175,10 @@
 </template>
 
 <script>
+import ListBox from '../ListBox/listBox.vue';
+/* eslint-disable*/
 export default {
+  components: { ListBox },
   name: "Modal",
   data(){
       return{

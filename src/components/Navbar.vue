@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full" >
     <div id="navbar" class="fixed w-full transform duration-500 ease-in-out">
       <div class=" container mx-auto">
         <div class="h-full w-full">
@@ -16,13 +16,10 @@
                 <!-- </button> -->
               </div>
             </div>
+                   <!-- menu desktop -->
             <div class="hidden lg:flex ">
               <div class="flex justify-end">
                 <div class="flex items-center">
-                  <!-- <a href="#" class="text-xl mx-5">INICIO</a> -->
-                  <!-- <a href="#" class="text-xl mx-5">SERVICIOS</a> -->
-                  <!-- <a href="#" class="text-xl mx-5">NOSOTROS</a> -->
-                  <!-- <a href="#" class="text-xl mx-5">CONTACTO</a> -->
                   <router-link class="text-xl mx-5" to="/">INICIO</router-link>
                   <router-link class="text-xl mx-5" to="/servicios"
                     >SERVICIOS</router-link
@@ -40,35 +37,37 @@
             <div class="lg:hidden">
               <div class=" fixed right-2 mt-2 z-50">
                 <button
-                  v-on:click="burgertoggle"
+                  @click="burgertoggle(!isToggle)"
                   id="buttonToggle"
                   class="focus:outline-none menu menu--slide"
                   type="button"
+                   :class="[isToggle ? 'menu--active' : '']"
                 >
                   <span class="menu__inner"></span>
                 </button>
-              
               </div>
             </div>
-            <!-- menu desktop -->
+         
             <div class=" lg:hidden">
               <div
                 id="menu"
-                class="fixed z-20 h-screen transform translate-x-full 
+                class="fixed z-20 h-screen transform 
       duration-500 ease-in-out w-screen h-screen bg-blue-200"
+                :class="[isToggle ? '-translate-x-full' : 'translate-x-full']"
               >
                 <div
-                  class="w-full h-full flex flex-col justify-center align-center uppercase font-medium"
+                  class="w-full h-full flex flex-col justify-center text-start items-center  uppercase font-medium"
                 >
-                  <!-- <a href="#" class="text-3xl m-5"> -->
-                  <!-- <router-link to="/">CONCTACTO</router-link> -->
-                  <!-- </a> -->
-                   <router-link  class="text-3xl m-5" to="/">INICIO</router-link>
-                    <router-link class="text-3xl m-5"  to="/servicios">SERVICIOS</router-link>
-                    <router-link class="text-3xl m-5"  to="/nosotros">NOSOTROS</router-link>
-                  <!-- <a href="#" >SERVICIOS</a>
-                  <a href="#" >NOSOTROS</a>
-                  <a href="#" >CONTACTOS</a> -->
+                  <router-link class="text-3xl m-5" to="/">INICIO</router-link>
+                  <router-link class="text-3xl m-5" to="/servicios"
+                    >SERVICIOS</router-link
+                  >
+                  <router-link class="text-3xl m-5" to="/nosotros"
+                    >NOSOTROS</router-link
+                  >
+                    <router-link class="text-3xl m-5" to="/contacto"
+                    >CONTACTO</router-link
+                  >
                 </div>
               </div>
             </div>
@@ -85,44 +84,36 @@ export default {
   data() {
     return {
       scroller: true,
+      isToggle: false,
     };
   },
   methods: {
     menuResponsive: function() {
-      if (
-        document.getElementById("menu").classList.contains("-translate-x-full")
-      ) {
-        document.getElementById("menu").classList.remove("-translate-x-full");
-        document.getElementById("menu").classList.remove("translate-x-full");
-        document.getElementsByTagName("body")[0].style.overflow="";
+      let menu = document.getElementById("menu");
+      if (menu.classList.contains("-translate-x-full")) {
+        menu.classList.remove("-translate-x-full");
+        menu.classList.remove("translate-x-full");
+        document.getElementsByTagName("body")[0].style.overflow = "";
       } else {
-        document.getElementById("menu").classList.remove("translate-x-full");
-        document.getElementById("menu").classList.add("-translate-x-full");
-        document.getElementsByTagName("body")[0].style.overflow="hidden"
+        menu.classList.remove("translate-x-full");
+        menu.classList.add("-translate-x-full");
+        document.getElementsByTagName("body")[0].style.overflow = "hidden";
       }
     },
-    burgertoggle: function() {
-      const menuButtons = document.getElementById("buttonToggle");
-      if (menuButtons) {
-        menuButtons.classList.toggle("menu--active");
-        this.menuResponsive();
-      }
-    },
-    redit: () => {
-      
+    burgertoggle: function(data) {
+      this.isToggle = data;
     },
   },
   created: function() {
     window.onscroll = function() {
       let navbar = document.getElementById("navbar");
       let positionScroll = window.scrollY;
-      // debugger;
       if (positionScroll > 50) {
-        navbar.classList.add("bg-gray-100");
-        navbar.classList.add("shadow-md");
+        navbar.classList.add("bg-white");
+        navbar.classList.add("shadow-lg");
       } else {
-        navbar.classList.remove("bg-gray-100");
-        navbar.classList.remove("shadow-md");
+        navbar.classList.remove("bg-white");
+        navbar.classList.remove("shadow-lg");
       }
     };
   },

@@ -9,3 +9,8 @@
     background: url("../imagenes/bg17.jpg");
     background-size: cover;
   }
+
+  .price::before {
+    content: "S/. ";
+    font-style: oblique;
+  }

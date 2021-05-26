@@ -7,14 +7,14 @@
         
         <div class="lg:col-start-2 flex w-full h-full">
           <div class="m-5 | w-full flex-col">
-            <p class="text-4xl lg:text-7xl text-left break-words ">
+            <p class="text-4xl lg:text-7xl text-left break-words text-white drop-shadow-md">
               Disfrutar de un postre es amor a primera mordida...
             </p>
 
             <div class="mt-10 px-10 w-full flex justify-end">
               <button
                 class=" border-blue-900 py-2 px-4 bg-blue-500 text-white bold-700 rounded-full hover:bg-blue-400 focus:outline-none focus:bg-blue-500"
-              @click="verCatalogo"
+              @click='irServicios'
               >
                 Ver Catalogo
               </button>
@@ -41,8 +41,10 @@ export default {
     NavbarVue,
   },
   methods:{
-    verCatalogo(){
-      window.open("https://www.google.com/","_blank")
+    
+      irServicios:function(){
+      this.$router.push("Servicios")
+    
     }
   }
 };
@@ -50,10 +52,10 @@ export default {
 
 <style>
 #header {
-  /* background-image: url('../assets/imagenes/header.jpg'); */
+  background-image: url('https://www.smallcakesnm.com/wp-content/uploads/2017/11/SCNM-PI54.jpg');
   background-repeat: no-repeat;
-  background-position: center 50%;
-  /* width: 600px%; */
+  background-position: center;
+    /* background-attachment: fixed; */
   background-size: cover;
 }
 </style>
