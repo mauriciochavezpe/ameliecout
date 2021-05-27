@@ -52,7 +52,7 @@ export default {
 
 <style>
 #header {
-  background-image: url('https://www.smallcakesnm.com/wp-content/uploads/2017/11/SCNM-PI54.jpg');
+  background-image: url('../assets/imagenes/SCNM-PI54.jpg');
   background-repeat: no-repeat;
   background-position: center;
     /* background-attachment: fixed; */
